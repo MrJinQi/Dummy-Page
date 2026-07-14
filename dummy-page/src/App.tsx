@@ -1,8 +1,7 @@
 import Mainpage from "./page/Mainpage/Mainpage"
-
 function App() {
   return (
-    <div className="App">
+    <div>
       <Mainpage />
     </div>
   )

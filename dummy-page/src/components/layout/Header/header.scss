@@ -1,0 +1,26 @@
+.Mainpage-header {
+  display: flex;
+  align-items: center;
+  background-color: #001529;
+  color: white;
+  padding: 0px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  justify-content: space-between;
+}
+
+.header-user-button{
+  margin-right: 30px;
+}
+
+h3.header-title {
+  &.ant-typography {
+    color: #ffffff;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-left: 30px;
+    font-family: "Helvetica Neue";
+  }
+}
+
