@@ -1,7 +1,4 @@
-import {
-  DashboardOutlined,
-  NotificationOutlined,
-} from "@ant-design/icons";
+import { ApartmentOutlined, DashboardOutlined, NotificationOutlined, RobotOutlined } from "@ant-design/icons";
 
 import { PATHS } from "./paths";
 import React from "react";
@@ -13,9 +10,18 @@ export const routeMenu = [
     label: "Dashboard",
   },
   {
-    key: PATHS.INFO,
-    icon: React.createElement(NotificationOutlined),
-    label: "Info",
+    key: PATHS.PROJECTS,
+    icon: React.createElement(ApartmentOutlined),
+    label: "Projects",
   },
-
+  {
+    key: PATHS.MEETINGS,
+    icon: React.createElement(NotificationOutlined),
+    label: "Meetings",
+  },
+  {
+    key: PATHS.BOTS,
+    icon: React.createElement(RobotOutlined),
+    label: "Bots",
+  },
 ];
