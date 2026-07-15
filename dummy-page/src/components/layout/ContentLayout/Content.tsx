@@ -1,6 +1,7 @@
 import Layout, { Content } from "antd/es/layout/layout";
 import Breadcrumb from "antd/es/breadcrumb/Breadcrumb";
 import "./content.scss";
+import { Outlet } from "react-router-dom";
 
 const ContentLayout = () => {
   return (
@@ -10,7 +11,7 @@ const ContentLayout = () => {
             className="content-breadcrumb"
           />
           <Content className="Mainpage-content">
-            <p>Content</p>
+            <Outlet/>
           </Content>
     </Layout>
   );
