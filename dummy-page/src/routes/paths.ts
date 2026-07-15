@@ -8,3 +8,4 @@ export const PATHS = {
 
   // PRODUCT_DETAIL: (id: string | number) => `/products/${id}`,
 } as const;
+  
