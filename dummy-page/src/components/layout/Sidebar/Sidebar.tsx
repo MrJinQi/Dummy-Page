@@ -1,47 +1,24 @@
 import "./sider.scss";
 import Sider from "antd/es/layout/Sider";
-import Menu, { type MenuProps } from "antd/es/menu/menu";
-import React from "react";
-import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
+import Menu from "antd/es/menu/menu";
 
-// interface SidebarLayoutProps {
-//   collapsed: boolean;
-// }
-
-
-
-const item: MenuProps['items'] = [
-  {
-    key: '1',
-    icon: React.createElement(UserOutlined),
-    label: 'user',
-  },
-    {
-    key: '2',
-    icon: React.createElement(NotificationOutlined),
-    label: 'notification',  
-  },
-    {   
-    key: '3',
-    icon: React.createElement(LaptopOutlined),  
-    label: 'laptop'
-  }
-]
-
-
-
+import { useAppNavigation } from "../../../hooks/useAppNavigation";
+import { routeMenu } from "../../../routes/routeMenu";
 
 const SidebarLayout = () => {
+  const { push } = useAppNavigation();
+
   return (
-      <Sider className="mainpage-sider" >
-        <Menu
-          theme="light"
-          mode="inline"
-          style={{ height: "100%", borderInlineEnd: 0 }}
-          className="mainpage-menu"
-          items={item}
-        ></Menu>
-      </Sider>
+    <Sider className="mainpage-sider">
+      <Menu
+        theme="light"
+        mode="inline"
+        style={{ height: "100%", borderInlineEnd: 0 }}
+        className="mainpage-menu"
+        items={routeMenu}
+        onClick={({ key }) => push(key)}
+      ></Menu>
+    </Sider>
   );
 };
 

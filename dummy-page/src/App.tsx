@@ -1,8 +1,8 @@
-import Mainpage from "./page/Mainpage/Mainpage"
+import AppRouter from "./routes/AppRouter"
 function App() {
   return (
     <div>
-      <Mainpage />
+       <AppRouter />;
     </div>
   )
 }
