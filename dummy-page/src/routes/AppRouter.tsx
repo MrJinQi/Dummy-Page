@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Mainpage from "../page/Mainpage/Mainpage";
 import DashBoard from "../page/dashboard/dashBoard";
-import ProjectDashboard from "../page/project/PorjectDashBoard";
+import ProjectDashboard from "../page/project/pages/PorjectDashBoard";
 import MeetingDashboard from "../page/meeting/MeetingDashBoard";
 import BotManager from "../page/bot/BotManager";
 
