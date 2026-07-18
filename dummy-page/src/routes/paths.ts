@@ -1,11 +1,15 @@
+import { generatePath } from "react-router-dom";
+
 export const PATHS = {
   HOME: "/",
-  INFO: "/Info",
-
-  // PROFILE: "/profile",
-
-  // USER_DETAIL: (id: string | number) => `/users/${id}`,
-
-  // PRODUCT_DETAIL: (id: string | number) => `/products/${id}`,
+  PROJECTS: "/projects",
+  MEETINGS: "/meetings",
+  BOTS: "/bots",
+  PROJECT_DETAIL: "/projects/:projectId",
 } as const;
   
+
+export const buildPath = {
+  projectDetail: (projectId: string) =>
+    generatePath(PATHS.PROJECT_DETAIL, { projectId }),
+};

@@ -1,4 +1,4 @@
-.Mainpage-header {
+.mainpage-header {
   display: flex;
   align-items: center;
   background-color: #001529;
@@ -24,3 +24,9 @@ h3.header-title {
   }
 }
 
+
+.language-switcher{
+  &.ant-typography{
+    color: #ffffff;
+  }
+}
