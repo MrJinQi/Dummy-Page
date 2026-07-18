@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Mainpage from "../page/Mainpage/Mainpage";
 import DashBoard from "../page/dashboard/dashBoard";
-import ProjectDashboard from "../page/project/pages/PorjectDashBoard";
+import ProjectDashboard from "../page/project/pages/ProjectDashBoard";
 import MeetingDashboard from "../page/meeting/MeetingDashBoard";
 import BotManager from "../page/bot/BotManager";
+import ProjectDetail from "../page/project/pages/ProjectDetail";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,16 @@ const router = createBrowserRouter([
       },
       {
         path: "projects",
-        Component: ProjectDashboard,
+        children: [
+          {
+            index: true,
+            Component: ProjectDashboard,
+          },
+          {
+            path: ":projectId",
+            Component: ProjectDetail,
+          },
+        ],
       },
       {
         path: "meetings",
