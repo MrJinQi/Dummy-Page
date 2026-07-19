@@ -1,10 +1,7 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from "@reduxjs/toolkit";
 
+import languageReducer from "./language/languageSlice";
 
 export const rootReducer = combineReducers({
-  
+  language: languageReducer,
 });
-
-
-export default rootReducer;
-export type RootState = ReturnType<typeof rootReducer>;
